@@ -25,16 +25,16 @@ def update_db(name, path):
         pass
 
 
-def add_urls():
-    index_page = open(os.path.join(docset_path, 'index.html')).read()
+def add_urls(base_dir=''):
+    index_page = open(os.path.join(docset_path, base_dir + 'index.html')).read()
     soup = BeautifulSoup(index_page)
     any = re.compile('.*')
     for tag in soup.find_all('a', {'href': any}):
         name = tag.text.strip()
         if len(name) > 0:
             path = tag.attrs['href'].strip()
-            if path.split('#')[0] not in ('index.html'):
-                update_db(name, path)
+            if path.split('#')[0] not in ('index.html') and not path.startswith('http'):
+                update_db(name, base_dir + path)
 
 
 def add_infoplist(info_path, index_page):
@@ -164,7 +164,8 @@ if __name__ == "__main__":
     cur.execute('CREATE UNIQUE INDEX anchor ON searchIndex (name, type, path);')
     print "Create the SQLite Index"
 
-    add_urls()
+    add_urls('dev/api/')
+    add_urls('dev/component/')
     db.commit()
     db.close()
 
