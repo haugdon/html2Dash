@@ -4,11 +4,11 @@
 
 # 直接使用
 
-下载我编译好的 minapp.docset ，添加到 Dash 里即可。如果你不知道 Dash 是什么，去了解一下绝对赚到。在 Linux/Windows 下也有相应的替代品。在此不赘述。
+下载我编译好的 [minapp.docset](https://github.com/kamidox/html2Dash/releases/download/minapp-docset-V0.1/minapp.docset.v0.1.tar.gz) ，添加到 Dash 里即可。如果你不知道 Dash 是什么，去了解一下绝对赚到。在 Linux/Windows 下也有相应的替代品。在此不赘述。
 
 # 自己生成微信小程序离线文档
 
-## 下载微信小程序文档
+## 步骤一：下载微信小程序文档
 
 我们使用 wget 把微信小程序的开发文档全部下载下来。
 
@@ -53,7 +53,7 @@ $ tree -L 2
 13 directories, 13 files
 ```
 
-## 转换成 Dash 格式的 docset
+## 步骤二：转换成 Dash 格式的 docset
 
 ```shell
 $ python html2dash.py -n minapp -d ./ -i ~/temp/wxadoc/mp.weixin.qq.com/debug/wxadoc/gitbook/images/icon_note_logo@2x.png -p dev/framework/MINA.html ~/temp/wxadoc/mp.weixin.qq.com/debug/wxadoc
@@ -75,8 +75,6 @@ $ pip install beautifulsoup4==4.3.2
 运行成功后，会在当前目录生成 minapp.docset 目录。直接导入 Dash 即可使用。
 
 -------------------------------------------------------------------------------
-Below is original document.
-/-------------------------------------------------------------------------------
 
 # html2Dash
 
