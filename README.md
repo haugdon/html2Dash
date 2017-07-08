@@ -4,7 +4,7 @@
 
 # 直接使用
 
-下载我编译好的 [minapp.docset](https://github.com/kamidox/html2Dash/releases/download/minapp-docset-V0.1/minapp.docset.v0.1.tar.gz) ，添加到 Dash 里即可。如果你不知道 Dash 是什么，去了解一下绝对赚到。在 Linux/Windows 下也有相应的替代品。在此不赘述。
+下载我编译好的 [minapp.docset](https://github.com/kamidox/html2Dash/releases) ，添加到 Dash 里即可。如果你不知道 Dash 是什么，去了解一下绝对赚到。在 Linux/Windows 下也有相应的替代品。在此不赘述。
 
 # 自己生成微信小程序离线文档
 
