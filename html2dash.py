@@ -164,8 +164,8 @@ if __name__ == "__main__":
     cur.execute('CREATE UNIQUE INDEX anchor ON searchIndex (name, type, path);')
     print "Create the SQLite Index"
 
-    add_urls('dev/api/')
-    add_urls('dev/component/')
+    add_urls('wxadoc/dev/api/')
+    add_urls('wxadoc/dev/component/')
     db.commit()
     db.close()
 

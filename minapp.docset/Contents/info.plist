@@ -16,7 +16,7 @@
             <key>isJavaScriptEnabled</key>
             <true/>
             <key>dashIndexFilePath</key>
-            <string>dev/framework/MINA.html</string>
+            <string>wxadoc/dev/framework/MINA.html</string>
     </dict>
     </plist>
     

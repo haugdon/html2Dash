@@ -56,7 +56,7 @@ $ tree -L 2
 ## 步骤二：转换成 Dash 格式的 docset
 
 ```shell
-$ python html2dash.py -n minapp -d ./ -i ~/temp/wxadoc/mp.weixin.qq.com/debug/wxadoc/gitbook/images/icon_note_logo@2x.png -p dev/framework/MINA.html ~/temp/wxadoc/mp.weixin.qq.com/debug/wxadoc
+$ python html2dash.py -n minapp -d ./ -i ~/temp/wxadoc/mp.weixin.qq.com/debug/wxadoc/gitbook/images/icon_note_logo@2x.png -p wxadoc/dev/framework/MINA.html ~/temp/wxadoc/mp.weixin.qq.com/debug/wxadoc
 
 Create the Docset Folder!
 Copy the HTML Documentation!
