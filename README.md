@@ -76,6 +76,22 @@ $ pip install beautifulsoup4==4.3.2
 
 -------------------------------------------------------------------------------
 
+# 其他文档
+
+## LightGBM
+
+```shell
+$ mkdir LightGBM
+$ cd LightGBM
+$ wget -r -p -k -np http://lightgbm.readthedocs.io/en/latest/index.html
+$ source .venb/bin/activate
+$ python html2dash.py -n LightGBM -d ./ LightGBM/lightgbm.readthedocs.io/en/latest
+```
+
+之后会生成 LightGBM.docset，打开 LightGBM.docset/Contents/info.plist，修改 index.html 为 latest/index.html 即可。
+
+-------------------------------------------------------------------------------
+
 # html2Dash
 
 html2Dash is an Documentation Set generator intended to be used with the [Dash.app](http://kapeli.com/dash/) API browser for OS X or one of its many clones. html2Dash is just like [doc2dash](https://github.com/hynek/doc2dash) but generating docset from any HTML documentations.

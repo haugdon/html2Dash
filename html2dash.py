@@ -26,7 +26,11 @@ def update_db(name, path):
 
 
 def add_urls(base_dir=''):
-    index_page = open(os.path.join(docset_path, base_dir + 'index.html')).read()
+    try:
+        index_page = open(os.path.join(docset_path, base_dir + 'index.html')).read()
+    except IOError as e:
+        print "file not exist: " + os.path.join(docset_path, base_dir + 'index.html')
+        return
     soup = BeautifulSoup(index_page)
     any = re.compile('.*')
     for tag in soup.find_all('a', {'href': any}):

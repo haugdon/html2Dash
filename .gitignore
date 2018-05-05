@@ -1,4 +1,8 @@
 .venv/
+.vscode/
 wxadoc/
+LightGBM/
+LightGBM.docset/
 minapp.docset.tar.gz
+LightGBM.docset.tar.gz
 
